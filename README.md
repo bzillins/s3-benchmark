@@ -12,9 +12,10 @@ To leverage this tool, the following prerequisites apply:
 
 
 # Building the Program
-Obtain a local copy of the repository using the following git command with any directory that is convenient:
+Obtain a local copy of the repository using the following git command in the GOPATH src directory:
 
 ```
+cd $GOPATH/src
 git clone https://github.com/wasabi-tech/s3-benchmark.git
 ```
 
@@ -24,8 +25,11 @@ LICENSE	README.md		s3-benchmark.go	s3-benchmark.ubuntu
 If the test is being run on Ubuntu version 16.04 LTS (the current long term release), the binary
 executable s3-benchmark.ubuntu will run the benchmark testing without having to build the executable. 
 
-Otherwise, to build the s3-benchmark executable, you must issue this following command:
-/usr/bin/go build s3-bechmark.go
+Otherwise, to build the s3-benchmark executable, you must issue this following commands:
+```
+go get se-benchmark
+go build s3-benchmark
+```
  
 # Command Line Arguments
 Below are the command line arguments to the program (which can be displayed using -help):
